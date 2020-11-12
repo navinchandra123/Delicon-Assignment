@@ -26,7 +26,7 @@ If we do not fill any fields or Enter unmatched password then it gives us a flas
 - ### After Successfully Login we go to our Dashboard 
 
 ![dashboard](https://user-images.githubusercontent.com/44003571/98905736-f2855d00-24e1-11eb-9a5f-87ef5bb0a33a.png)
- Our Dashboard Page contains many properties
+ Our Dashboard Page contains many features
  - Logout
  When we click on **Logout** we are redirected to our login page 
 - When we click on **Enter New Food** then we go to a food adding page which is looks like 

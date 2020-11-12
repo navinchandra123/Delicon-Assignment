@@ -1,0 +1,56 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3"> Reservation For Food </h1>
+        <form action="/users/add_food" method="POST">
+          <input type="hidden" name="id" value="<%=id %>">
+          <div class="form-group">
+            <label for="food">Food Name</label>
+            <input
+              type="name"
+              name="name"
+              class="form-control"
+              placeholder="Enter Food Name"
+              value="<%= typeof name != 'undefined' ? name : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select name="category" class="form-control">
+              <% if(category =='') { %>
+                <option value="veg">Veg</option>
+                <option value="nonveg">Non-Veg</option>
+              <% } %>
+              <% if( category =='veg') { %>
+                <option value="veg" selected>Veg</option>
+                <option value="nonveg">Non-Veg</option>
+              <% } %>
+              <% if( category =='nonveg') { %>
+                <option value="veg">Veg</option>
+                <option value="nonveg" selected>Non-Veg</option>
+              <% } %>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="price">Price</label>
+            <input
+              type="text"
+              name="price"
+              class="form-control"
+              placeholder="Enter Price"
+              value="<%= typeof price != 'undefined' ? price : '' %>"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <% if(id=='') { %>
+            Add Food
+            <% } %>
+            <% if(id != '') { %>
+              Edit Food
+            <% } %>
+          </button>
+        </form>
+        <p class="lead mt-4">See All  <a href="/users/dashboard">Foods</a></p>
+      </div>
+    </div>
+  </div>

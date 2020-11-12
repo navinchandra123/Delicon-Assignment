@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Font Awesome Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div>
+        <h3 style="display: inline;"><a class="btn btn-secondary" href="/users/enter_new_food" style="display: inline;"><i
+                    class="fa fa-plus" style="display: inline;"></i> Enter New Food</a> Reservation List</h3>
+        <a href="/users/logout" class="btn btn-secondary" style="display: inline; float: right; margin: 0; color: red;">Logout</a>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Food Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(var i = 0 ; i < data.length ; i++){ %>
+            <tr>
+                <td><%= data[i].name %></td>
+                <td><%= data[i].category %></td>
+                <td><%= data[i].price %></td>
+                <td>
+                    <!-- <i class="fa fa-pencil" style="font-size:36px"></i> -->
+                    <a href="/users/edit_food/<%= data[i].id %>" style="margin-right: 10px;"><i class="fa fa-pencil"  aria-hidden="true"></i></a>
+                    <a href="/users/delete_food/<%= data[i].id %>" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -6,7 +6,7 @@ In Login page we ask for email and password of user and if email and password bo
 the dashboard.
 
 Dashboard has the menu of the restaurant, owner can edit or delete the food's data. And if owner wants to enter new food data then we take the food data
-information and store it into our batabas which is mongodb. And if User wants to logout from dashbord then he click on Logout button and he got logout.
+information and store it into our batabas which is mongodb. And if User wants to logout from dashbord then he click on Logout button and He gets logged out.
 
 For the better understanding, I am uploading some screenshots:-
 
